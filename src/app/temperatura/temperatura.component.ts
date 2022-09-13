@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'temperatura',
@@ -7,20 +7,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TemperaturaComponent implements OnInit {
   constructor() {}
-  temp:number = 22;
-  
+
+  @Input() temp: number;
+
   ngOnInit() {}
 
   //funciones
-  incrementarTemperatura(){
-    this.temp++;
+  @Output() riseTempEvent = new EventEmitter(); //creacion de evento propio
+  @Output() downTempEvent = new EventEmitter();
+  @Output() resetTempEvent = new EventEmitter();
+
+  riseTempInvoke() {  //Llamador de evento
+    this.riseTempEvent.emit();
   }
-  decrementarTemperatura(){
-    this.temp--;
+
+  downTempInvoke() {
+    this.downTempEvent.emit();
   }
-  resetTemperatura(){
-    this.temp = 22;
+
+  resetTempInvoke() {
+    this.resetTempEvent.emit();
   }
 }
-
-

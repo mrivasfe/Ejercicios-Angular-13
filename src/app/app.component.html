@@ -4,10 +4,18 @@
     <location></location>
   </div>
   <div class="column">
-    <temperatura></temperatura>
+    <!--[variableHijo]="variablePadre" Paso de variable de padre a hijo-->
+    <!--(eventoHijo)="funcionPadre" Paso del evento desde hijo a padre-->
+    <temperatura 
+      [temp] = "temp"   
+      (riseTempEvent)="incrementarTemperatura()" 
+      (downTempEvent)="decrementarTemperatura()">
+    </temperatura>
   </div>
   <div class="column">
     <clima></clima>
   </div>
 </div>
-<my-footer [titleHijo] = "title"></my-footer><!--Se suele poner siempre lo mismo, pero los corchetes son el hijo-->
+<my-footer 
+  [titleHijo] = "title" 
+  [temp] = "temp"></my-footer><!--Se suele poner siempre lo mismo, pero los corchetes son el hijo-->

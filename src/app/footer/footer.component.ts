@@ -10,6 +10,8 @@ export class FooterComponent implements OnInit {
   constructor() { }
   @Input() titleHijo:string;
   footer: string = 'Todos los derechos reservados';
+  @Input() temp:number;
+
   ngOnInit() {
   }
 

@@ -1,10 +1,10 @@
 TEMP (Celsius)
   <div class="temp">
     <h1>{{ temp }} C</h1>
-    <button on-click="resetTemperatura()" >Reset</button>
-    <button (click)="resetTemperatura()" >Reset</button>
+    <button on-click="resetTempInvoke()" >Reset</button>
+    <button (click)="resetTempInvoke()" >Reset</button>
 
-    <button (click)="incrementarTemperatura()" >+</button>
+    <button (click)="riseTempInvoke()" >+</button>
 
-    <button (click)="decrementarTemperatura()" >-</button>
+    <button (click)="downTempInvoke()" >-</button>
   </div>

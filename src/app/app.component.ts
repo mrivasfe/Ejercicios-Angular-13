@@ -8,7 +8,17 @@ import { Component, VERSION } from '@angular/core';
 export class AppComponent {
   
   title: string = 'Weather APP';
+  temp: number = 22;
   
+  incrementarTemperatura(){
+    this.temp++;
+  }
+  decrementarTemperatura(){
+    this.temp--;
+  }
+  resetTemperatura(){
+    this.temp = 22;
+  }
 }
 
 //EJERCICIO 2:
