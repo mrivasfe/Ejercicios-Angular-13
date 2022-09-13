@@ -7,12 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TemperaturaComponent implements OnInit {
   constructor() {}
-  temp = '22';
+  temp:number = 22;
+  
   ngOnInit() {}
 
   //funciones
+  incrementarTemperatura(){
+    this.temp++;
+  }
+  decrementarTemperatura(){
+    this.temp--;
+  }
   resetTemperatura(){
-    this.temp = "-";
+    this.temp = 22;
   }
 }
 

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'topbanner',
@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopbannerComponent implements OnInit {
   constructor() {}
-  title: string = 'Weather APP';
+  
+  @Input() title:string;
+
   ngOnInit() {}
 }
