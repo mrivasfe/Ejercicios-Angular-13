@@ -1,10 +1,13 @@
 TEMP (Celsius)
   <div class="temp">
     <h1>{{ temp }} C</h1>
-    <button on-click="resetTempInvoke()" >Reset</button>
-    <button (click)="resetTempInvoke()" >Reset</button>
 
     <button (click)="riseTempInvoke()" >+</button>
 
     <button (click)="downTempInvoke()" >-</button>
+
+    <!--[(ngModel)]="variable" Permite el cambio del valor en la variable bidireccional dentro del componente-->
+    <!--[(ngModelChange)]="funcionEvento" ejecuta la funcion asociada cuando hay un cambio-->
+    <input id="idtemp" type="text" [(ngModel)]="temp" (ngModelChange)="updateTempInvoke($event)"/>
+
   </div>

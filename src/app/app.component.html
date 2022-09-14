@@ -6,10 +6,12 @@
   <div class="column">
     <!--[variableHijo]="variablePadre" Paso de variable de padre a hijo-->
     <!--(eventoHijo)="funcionPadre" Paso del evento desde hijo a padre-->
-    <temperatura 
+     <!--<temperatura 
       [temp] = "temp"   
       (riseTempEvent)="incrementarTemperatura()" 
       (downTempEvent)="decrementarTemperatura()">
+    </temperatura>-->
+    <temperatura [(temp)] = "temp" >
     </temperatura>
   </div>
   <div class="column">
